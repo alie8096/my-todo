@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #F72C5B;
+    text-align: center;
+    font-weight: bold;
+}
+
+h2 {
+    color: gray;
+    text-align: center;
+}
+
+
+
+.new {
+    background-color: #E4F1AC;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: calc(100vh - 600px);
+    margin: 20px;
+}
+
+.get-todo-input {
+    outline: none;
+    border-radius: 15px;
+    border: 2px solid #A7D477;
+    width: max-content;
+    max-width: 100%;
+    padding: 4px 8px;
+    margin: 8px;
+}
+
+.get-todo-label {
+    margin: 8px;
+    color: gray;
+}
+
+button {
+    outline: none;
+    border-radius: 15px;
+    border: 2px solid #F72C5B;
+    background-color: #FF748B;
+    color: #fff;
+    padding: 4px 8px;
+    margin: 8px;
+    font-weight: bold;
+}
+
+.todo-container {
+    margin: 20px;
+    padding: 15px;
+    background-color: #A7D477;
+    min-height: calc(100vh - 480px);
+    border: none;
+    border-radius: 15px;
+}
+
+
+ul {
+    font-size: 20px;
+    list-style-type: none;
+}
+
+li {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+ul li label {
+    cursor: pointer;
+}
+
+ul li input[type='checkbox'] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+ul li input[type="checkbox"]:checked {
+    border-color: #F72C5B;
+}
+
+ul li input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #FF748B;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.2s ease-in-out;
+}
+
+ul li input[type="checkbox"]:checked::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
