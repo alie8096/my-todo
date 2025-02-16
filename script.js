@@ -74,6 +74,6 @@ const writeTasks = (num, task, stat) => {
     li.appendChild(input);
     li.appendChild(label);
     li.appendChild(br);
-    ul.appendChild(li);
+    ul.insertBefore(li, ul.firstChild);
 }
 
